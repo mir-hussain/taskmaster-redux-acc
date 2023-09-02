@@ -8,7 +8,7 @@ export default function Modal({ isOpen, setIsOpen, title, children }) {
 
   return (
     <>
-      <Transition appear show={isOpen} as={Fragment}>
+      <Transition appear show={isOpen} as={Fragment} className="z-[1000]">
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}

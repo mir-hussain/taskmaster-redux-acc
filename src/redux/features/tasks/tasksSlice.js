@@ -41,7 +41,9 @@ const tasksSlice = createSlice({
     },
     userTasks: (state, { payload }) => {
       state.userSpecificTasks = state.tasks.filter(
-        (item) => item.assignedTo === payload
+        (item) =>
+          item.assignedTo === payload &&
+          (item.status === 'pending' || item.status === 'running')
       );
     },
   },
